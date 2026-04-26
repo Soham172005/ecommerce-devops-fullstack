@@ -92,7 +92,8 @@ jobs:
 
   deploy:
     needs: build-and-push
-    if: github.event_name == 'push'
+    # Enable this after the target Kubernetes cluster is ready and KUBE_CONFIG is added.
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
