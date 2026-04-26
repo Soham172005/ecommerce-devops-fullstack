@@ -23,11 +23,17 @@ export default function Cart() {
   return (
     <section>
       <div className="page-heading">
-        <p className="eyebrow">Checkout</p>
-        <h1>Your cart</h1>
+        <div>
+          <p className="eyebrow">Checkout</p>
+          <h1>Your cart</h1>
+        </div>
+        <p>Review your selected products before moving to the next step.</p>
       </div>
       {cart.items.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <div className="empty-state">
+          <h2>Your cart is empty</h2>
+          <p>Explore the catalog and add something worth shipping.</p>
+        </div>
       ) : (
         <div className="cart-list">
           {cart.items.map((item) => (

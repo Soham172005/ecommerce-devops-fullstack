@@ -15,9 +15,12 @@ export default function App() {
   const { accessToken, logout } = useAuth();
 
   return (
-    <div>
+    <div className="app-shell">
       <header className="site-header">
-        <Link className="brand" to="/">CommerceOps</Link>
+        <Link className="brand" to="/">
+          <span className="brand-mark">C</span>
+          <span>CommerceOps</span>
+        </Link>
         <nav>
           <Link to="/products">Products</Link>
           <Link to="/cart">Cart</Link>

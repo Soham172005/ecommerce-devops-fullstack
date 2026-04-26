@@ -30,6 +30,10 @@ export default function LoginRegister() {
 
   return (
     <section className="auth-panel">
+      <div className="auth-heading">
+        <p className="eyebrow">Account access</p>
+        <h1>{mode === 'register' ? 'Create your account' : 'Welcome back'}</h1>
+      </div>
       <div className="segmented">
         <button className={mode === 'login' ? 'active' : ''} onClick={() => setMode('login')}>Login</button>
         <button className={mode === 'register' ? 'active' : ''} onClick={() => setMode('register')}>Register</button>
